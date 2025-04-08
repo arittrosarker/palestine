@@ -60,3 +60,37 @@ input[type="checkbox"] {
   font-size: 0.8em;
   color: #888;
 }
+
+/* 🔁 Protest Art Slider */
+.art-slider {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #f4f4f4;
+}
+
+.art-track {
+  display: flex;
+  width: fit-content;
+  animation: slideArt 30s linear infinite;
+}
+
+.art-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideArt {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Optional: Pause on hover */
+.art-slider:hover .art-track {
+  animation-play-state: paused;
+}
