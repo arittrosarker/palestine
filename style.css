@@ -94,27 +94,86 @@ input[type="checkbox"] {
 .art-slider:hover .art-track {
   animation-play-state: paused;
 }
-.submit-artwork {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #555;
+
+/* -----------------------------
+   Modal and PFP Feature Styles
+------------------------------*/
+
+/* Modal container (covers full screen) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); /* Dim/blur background */
 }
 
-.copy-email {
-  color: #007bff;
+/* Centered modal content */
+.modal-content {
+  background-color: #fff;
+  margin: auto; /* Center horizontally */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 90%;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+  z-index: 1001; /* Higher than the floating button */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+/.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input[type="file"] {
+  margin: 20px 0;
+}
+
+.modal-content canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Close button (top right of modal) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
   cursor: pointer;
-  text-decoration: underline;
-  transition: 0.2s;
 }
 
-.copy-email:hover {
-  color: #0056b3;
+.close:hover {
+  color: #000;
 }
 
-.copied-text {
-  margin-left: 10px;
-  color: green;
-  font-size: 0.85em;
-  display: none;
+/* Floating PFP Toggle Button */
+.pfp-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #0066ff, #00ccff);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1001;
 }
 
+.pfp-toggle-btn:hover {
+  opacity: 0.9;
+}

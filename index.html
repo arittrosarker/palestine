@@ -29,41 +29,60 @@
   <div class="art-slider">
     <div class="art-track">
       <!-- Original set -->
-<img src="art/1.jpg" alt="Protest Art 1" />
-<img src="art/2.jpg" alt="Protest Art 2" />
-<img src="art/3.jpg" alt="Protest Art 3" />
-<img src="art/4.jpg" alt="Protest Art 4" />
-<img src="art/5.jpg" alt="Protest Art 5" />
-<img src="art/6.jpg" alt="Protest Art 6" />
-<img src="art/7.jpg" alt="Protest Art 7" />
-<img src="art/8.jpg" alt="Protest Art 8" />
-<img src="art/9.jpg" alt="Protest Art 9" />
-<img src="art/10.jpg" alt="Protest Art 10" />
-<img src="art/11.jpg" alt="Protest Art 11" />
-<img src="art/12.jpg" alt="Protest Art 12" />
+      <img src="art/1.jpg" alt="Protest Art 1" />
+      <img src="art/2.jpg" alt="Protest Art 2" />
+      <img src="art/3.jpg" alt="Protest Art 3" />
+      <img src="art/4.jpg" alt="Protest Art 4" />
+      <img src="art/5.jpg" alt="Protest Art 5" />
+      <img src="art/6.jpg" alt="Protest Art 6" />
+      <img src="art/7.jpg" alt="Protest Art 7" />
+      <img src="art/8.jpg" alt="Protest Art 8" />
+      <img src="art/9.jpg" alt="Protest Art 9" />
+      <img src="art/10.jpg" alt="Protest Art 10" />
+      <img src="art/11.jpg" alt="Protest Art 11" />
+      <img src="art/12.jpg" alt="Protest Art 12" />
+      <img src="art/13.jpg" alt="Protest Art 13" />
+      <img src="art/14.jpg" alt="Protest Art 14" />
+      <img src="art/15.jpg" alt="Protest Art 15" />
+      <img src="art/16.jpg" alt="Protest Art 16" />
 
       <!-- Duplicate set -->
-<img src="art/1.jpg" alt="Protest Art 1" />
-<img src="art/2.jpg" alt="Protest Art 2" />
-<img src="art/3.jpg" alt="Protest Art 3" />
-<img src="art/4.jpg" alt="Protest Art 4" />
-<img src="art/5.jpg" alt="Protest Art 5" />
-<img src="art/6.jpg" alt="Protest Art 6" />
-<img src="art/7.jpg" alt="Protest Art 7" />
-<img src="art/8.jpg" alt="Protest Art 8" />
-<img src="art/9.jpg" alt="Protest Art 9" />
-<img src="art/10.jpg" alt="Protest Art 10" />
-<img src="art/11.jpg" alt="Protest Art 11" />
-<img src="art/12.jpg" alt="Protest Art 12" />
+      <img src="art/1.jpg" alt="Protest Art 1" />
+      <img src="art/2.jpg" alt="Protest Art 2" />
+      <img src="art/3.jpg" alt="Protest Art 3" />
+      <img src="art/4.jpg" alt="Protest Art 4" />
+      <img src="art/5.jpg" alt="Protest Art 5" />
+      <img src="art/6.jpg" alt="Protest Art 6" />
+      <img src="art/7.jpg" alt="Protest Art 7" />
+      <img src="art/8.jpg" alt="Protest Art 8" />
+      <img src="art/9.jpg" alt="Protest Art 9" />
+      <img src="art/10.jpg" alt="Protest Art 10" />
+      <img src="art/11.jpg" alt="Protest Art 11" />
+      <img src="art/12.jpg" alt="Protest Art 12" />
+      <img src="art/13.jpg" alt="Protest Art 13" />
+      <img src="art/14.jpg" alt="Protest Art 14" />
+      <img src="art/15.jpg" alt="Protest Art 15" />
+      <img src="art/16.jpg" alt="Protest Art 16" />
+
+
     </div>
-
   </div>
-<p class="submit-artwork">
-  Submit your artwork at 
-  <span class="copy-email" onclick="copyEmail()">arittrosarker2007@gmail.com</span>
-  <span id="copy-confirm" class="copied-text">Copied!</span>
-</p>
 
+  <!-- Floating Button to Open PFP Modal -->
+  <button id="openPFPModal" class="pfp-toggle-btn">🇵🇸Frame Your PFP with Palestine Flag</button>
+
+  <!-- PFP Modal -->
+  <div id="pfpModal" class="modal">
+    <div class="modal-content">
+      <span id="pfpClose" class="close">&times;</span>
+      <h2>Frame Your Profile Picture</h2>
+      <input type="file" id="imageUpload" accept="image/*">
+      <br>
+      <canvas id="previewCanvas" width="1024" height="1024"></canvas>
+      <br>
+      <button id="downloadBtn" disabled>Download Framed PFP</button>
+    </div>
+  </div>
 
   <script type="module" src="main.js"></script>
 </body>
