@@ -49,5 +49,16 @@ checkbox.addEventListener("change", () => {
     runTransaction(counterRef, (current) => {
       return (current || 0) + 1;
     });
+    window.copyEmail = function () {
+  const email = "arittrosarker2007@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    const confirm = document.getElementById("copy-confirm");
+    confirm.style.display = "inline";
+
+    setTimeout(() => {
+      confirm.style.display = "none";
+    }, 2000);
+  });
+};
   }
 });
