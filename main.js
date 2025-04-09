@@ -21,6 +21,7 @@ const db = getDatabase(app);
 // DOM Elements for Firebase Verification
 const checkbox = document.getElementById("verifyBox");
 const counterEl = document.getElementById("counter");
+const confirmation = document.getElementById("confirmation");
 
 // Firebase counter reference
 const counterRef = ref(db, "verifiedCount");
@@ -37,11 +38,15 @@ const alreadyVerified = localStorage.getItem("palestine_verified");
 if (alreadyVerified === "true") {
   checkbox.checked = true;
   checkbox.disabled = true;
+  confirmation.style.display = "none"; // Hide confirmation if already verified
+} else {
+  confirmation.style.display = "none"; // Hide initially
 }
 
 // Checkbox change listener
 checkbox.addEventListener("change", () => {
   if (checkbox.checked && alreadyVerified !== "true") {
+    confirmation.style.display = "inline"; // Show confirmation on first tick
     checkbox.disabled = true;
     localStorage.setItem("palestine_verified", "true");
 
@@ -123,6 +128,7 @@ downloadBtn.addEventListener('click', () => {
   a.click();
   document.body.removeChild(a);
 });
+
 window.copyEmail = function () {
   const email = "arittrosarker2007@gmail.com";
   navigator.clipboard.writeText(email).then(() => {
@@ -134,4 +140,3 @@ window.copyEmail = function () {
     }, 2000);
   });
 };
-
