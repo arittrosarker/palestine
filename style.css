@@ -122,15 +122,17 @@ input[type="checkbox"] {
   display: flex;
   width: fit-content;
   animation: slideArt 30s linear infinite;
+  align-items: center; /* Center images vertically */
 }
 
 .art-track img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
+  max-width: 300px; /* Maximum width for consistency */
+  height: auto; /* Let height adjust based on aspect ratio */
+  object-fit: contain; /* Show entire image without cropping */
   border-radius: 8px;
   margin: 0 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-height: 200px; /* Cap height to avoid overly tall images */
 }
 
 @keyframes slideArt {
